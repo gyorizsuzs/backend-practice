@@ -33,4 +33,17 @@ window.addEventListener('load', () => {
 
     console.log(event.target, imgName, imgFile);
   });
+
+  document.getElementById('get-nasa').addEventListener('click', async () => {
+    const response = await fetch(
+      'https://api.nasa.gov/planetary/apod?api_key=cK2CR2YdWKZXd82Bo0Vne4VeowgvXdTm5q0hmjvm&date=2022-08-31&thumbs="true")'
+    );
+    if (response.status === 200) {
+      const data = await response.text();
+      const explanation = data.explanation;
+      console.log(data);
+    } else {
+      console.log('no data received');
+    }
+  });
 });

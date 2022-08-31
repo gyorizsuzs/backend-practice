@@ -41,6 +41,14 @@ app.post('/uploadImg', (req, res) => {
   });
 });
 
+app.get('/getData', function (req, res) {
+  res.status(200).send({
+    name: 'Gipsz Jakab',
+    age: 99,
+    status: 'ok',
+  });
+});
+
 app.listen(9000, () => {
   console.log(`Server is running on https://127.0.0.1:9000`);
 });
