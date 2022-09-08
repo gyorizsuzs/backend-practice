@@ -1,3 +1,158 @@
 h1 {
-  color: blueviolet;
+  color: rgb(27, 27, 27);
+}
+
+body {
+  height: 97vh;
+  width: 95vw;
+  display: flex;
+  background-image: linear-gradient(rgb(255, 228, 199), rgb(255, 144, 0));
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  height: 95%;
+  width: 45%;
+  border-radius: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.firstName,
+.surname,
+.country {
+  height: 7%;
+  width: 80%;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(241, 244, 248);
+}
+
+.firstName::placeholder,
+.surname::placeholder,
+.country::placeholder,
+.city::placeholder,
+.zipCode::placeholder,
+.street::placeholder,
+.houseNumber::placeholder {
+  padding-left: 5%;
+  color: rgba(27, 27, 27, 0.202);
+}
+
+#city,
+#street {
+  height: 7%;
+  width: 80%;
+  gap: 2%;
+  border: none;
+  display: flex;
+}
+
+.city,
+.zipCode,
+.street,
+.houseNumber {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(241, 244, 248);
+}
+
+.buttons {
+  height: 25%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outer,
+.inner {
+  width: 100%;
+  height: 70%;
+  gap: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* #reset {
+  height: 3rem;
+  width: 8rem;
+  align-content: center;
+} */
+
+button,
+#reset {
+  height: 70%;
+  width: 80%;
+  align-content: center;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(255, 228, 199);
+  font-size: large;
+  cursor: pointer;
+}
+
+label {
+  height: 3%;
+  width: 80%;
+  margin-left: 5%;
+  font-size: 1.2rem;
+  color: rgb(27, 27, 27);
+}
+
+#profile {
+  height: 50%;
+  width: 70%;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(241, 244, 248);
+}
+
+#profile::placeholder {
+  padding-left: 5%;
+  color: rgba(27, 27, 27, 0.202);
+}
+
+#picture {
+  height: 40%;
+  width: 17%;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+
+#get-nasa {
+  margin-bottom: 5%;
+  height: 10%;
+  width: 80%;
+  background-color: rgb(255, 144, 0);
+  box-shadow: rgba(255, 145, 0, 0.5) 0px 3px 12px;
+  font-size: larger;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
 }

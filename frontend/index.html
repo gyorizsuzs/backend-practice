@@ -4,24 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" />
-    <scrip src="script.js"></script> -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="public/style2.css" />
     <script src="public/script2.js"></script>
 
-    <title>Practice</title>
+    <title>Profile</title>
   </head>
   <body>
     <div id="root">
-      <h1>Hello World!</h1>
+      <div id="form">
+        <h1>Create an account</h1>
 
-      <form action="">
-        <input type="text" placeholder="image name" />
-        <input type="file" />
-        <button>Send</button>
-      </form>
-      <button id="get-nasa">GET NASA</button>
+        <form action="">
+          <input
+            type="text"
+            class="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" class="surname" placeholder="Surname" required />
+          <label for="" class="address">Address:</label>
+          <input type="text" class="country" placeholder="Country" required />
+
+          <div id="city">
+            <input
+              type="text"
+              class="zipCode"
+              placeholder="ZIP Code"
+              required
+            />
+            <input type="text" class="city" placeholder="City" required />
+          </div>
+
+          <div id="street">
+            <input type="text" class="street" placeholder="Street" required />
+            <input
+              type="number"
+              class="houseNumber"
+              placeholder="House Number"
+              required
+            />
+          </div>
+
+          <div class="buttons">
+            <div class="outer">
+              <input
+                type="text"
+                id="profile"
+                placeholder="Profile Picture"
+                required
+              />
+              <input type="file" id="picture" />
+            </div>
+            <div class="inner">
+              <input id="reset" type="reset" value="Delete" />
+              <button>Upload</button>
+            </div>
+          </div>
+        </form>
+        <button id="get-nasa">Save & Continue</button>
+      </div>
     </div>
   </body>
 </html>

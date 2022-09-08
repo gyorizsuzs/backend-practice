@@ -30,15 +30,18 @@ app.post('/uploadImg', (req, res) => {
   const file = req.files.imageFile;
   const fileName = req.body.imageName;
 
-  file.mv(`${__dirname}/../frontend/public/${fileName}.jpg`, (error) => {
-    if (error) {
-      return res.status(500).send(error);
-    }
+  file.mv(
+    `${__dirname}/../frontend/public/profile/${fileName}.jpg`,
+    (error) => {
+      if (error) {
+        return res.status(500).send(error);
+      }
 
-    return res.status(200).send({
-      imageName: fileName,
-    });
-  });
+      return res.status(200).send({
+        imageName: fileName,
+      });
+    }
+  );
 });
 
 app.get('/getData', function (req, res) {
