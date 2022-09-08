@@ -1,5 +1,5 @@
 h1 {
-  color: rgb(27, 27, 27);
+  color: rgb(255, 144, 0);
 }
 
 body {
@@ -69,6 +69,17 @@ textarea {
   outline: none;
 }
 
+#intro {
+  outline: none;
+  resize: none;
+}
+
+#intro::placeholder {
+  padding-left: 5%;
+  padding-top: 2%;
+  color: rgba(27, 27, 27, 0.202);
+}
+
 #city,
 #street {
   height: 7%;
@@ -116,8 +127,10 @@ button,
   align-content: center;
   border-radius: 50px;
   border: none;
-  background-color: rgb(255, 228, 199);
+  background-color: rgb(255, 185, 97);
   font-size: large;
+  font-weight: 600;
+  color: white;
   cursor: pointer;
 }
 
@@ -126,7 +139,7 @@ label {
   width: 80%;
   margin-left: 5%;
   font-size: 1.2rem;
-  color: rgb(27, 27, 27);
+  color: rgb(255, 185, 97);
 }
 
 #profile {
@@ -157,6 +170,7 @@ label {
   width: 80%;
   background-color: rgb(255, 144, 0);
   box-shadow: rgba(255, 145, 0, 0.5) 0px 3px 12px;
+  color: white;
   font-size: larger;
   font-weight: 600;
   letter-spacing: 0.2rem;
