@@ -48,6 +48,15 @@ form {
   background-color: rgb(241, 244, 248);
 }
 
+input {
+  outline: none;
+}
+
+/* input[type='text'],
+textarea {
+  margin-left: 5%;
+} */
+
 .firstName::placeholder,
 .surname::placeholder,
 .country::placeholder,
@@ -57,6 +66,7 @@ form {
 .houseNumber::placeholder {
   padding-left: 5%;
   color: rgba(27, 27, 27, 0.202);
+  outline: none;
 }
 
 #city,
@@ -72,6 +82,7 @@ form {
 .zipCode,
 .street,
 .houseNumber {
+  padding-left: 2.5%;
   height: 100%;
   width: 100%;
   border-radius: 50px;
@@ -97,12 +108,6 @@ form {
   align-items: center;
   justify-content: space-between;
 }
-
-/* #reset {
-  height: 3rem;
-  width: 8rem;
-  align-content: center;
-} */
 
 button,
 #reset {
@@ -135,6 +140,7 @@ label {
 #profile::placeholder {
   padding-left: 5%;
   color: rgba(27, 27, 27, 0.202);
+  outline: none;
 }
 
 #picture {
@@ -155,4 +161,10 @@ label {
   font-weight: 600;
   letter-spacing: 0.2rem;
   cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
