@@ -70,6 +70,8 @@ textarea {
 }
 
 #intro {
+  height: 15%;
+  width: 80%;
   outline: none;
   resize: none;
 }
