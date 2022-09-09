@@ -120,7 +120,7 @@ textarea {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 button,
@@ -151,6 +151,7 @@ label {
   border-radius: 50px;
   border: none;
   background-color: rgb(241, 244, 248);
+  display: none;
 }
 
 #profile::placeholder {
@@ -161,9 +162,8 @@ label {
 
 #picture {
   height: 40%;
-  width: 17%;
-  display: flex;
-  align-content: center;
+  width: 80%;
+  margin-left: 25%;
   cursor: pointer;
 }
 
@@ -184,4 +184,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+img {
+  height: 90%;
+  width: 70%;
+  padding: 5%;
 }

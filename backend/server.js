@@ -1,7 +1,8 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const path = require('path');
-/* const fs = require('fs'); */
+const fs = require('fs');
+const { profile } = require('console');
 
 const app = express();
 
@@ -27,20 +28,27 @@ app.post('/uploadImg', (req, res) => {
   }
 
   const file = req.files.imageFile;
-  const fileName = req.body.imageName;
+  /*   const fileName = req.body.imageName; */
 
-  file.mv(
-    `${__dirname}/../frontend/public/profile/${fileName}.jpg`,
-    (error) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
-
-      return res.status(200).send({
-        imageName: fileName,
-      });
+  file.mv(`${__dirname}/../frontend/public/profile.jpg`, (error) => {
+    if (error) {
+      return res.status(500).send(error);
     }
-  );
+
+    return res.status(200).send({
+      imageName: 'profile',
+    });
+  });
+
+  /*   file.mv('${__dirname}/..frontend/public/profile.json', (error) => {
+    if (error) {
+      return res.status(500).send(error);
+    }
+
+    return res.status(200).send({
+      fileName: 'profile',
+    });
+  }); */
 });
 
 app.get('/getData', function (req, res) {
