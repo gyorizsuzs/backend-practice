@@ -1,12 +1,13 @@
 h1 {
-  color: rgb(255, 144, 0);
+  color: rgb(84, 218, 248);
 }
 
 body {
   height: 97vh;
   width: 95vw;
+  box-sizing: border-box;
   display: flex;
-  background-image: linear-gradient(rgb(255, 228, 199), rgb(255, 144, 0));
+  background-image: linear-gradient(rgb(214, 246, 253), rgb(84, 218, 248));
 }
 
 #root {
@@ -20,7 +21,7 @@ body {
 
 #form {
   height: 95%;
-  width: 45%;
+  width: 65%;
   border-radius: 20px;
   font-family: 'Nunito Sans', sans-serif;
   display: flex;
@@ -42,7 +43,8 @@ form {
 .surname,
 .country {
   height: 7%;
-  width: 80%;
+  width: 75%;
+  padding-left: 5%;
   border-radius: 50px;
   border: none;
   background-color: rgb(241, 244, 248);
@@ -64,22 +66,27 @@ textarea {
 .zipCode::placeholder,
 .street::placeholder,
 .houseNumber::placeholder {
-  padding-left: 5%;
+  box-sizing: content-box;
+  width: 100%;
   color: rgba(27, 27, 27, 0.202);
   outline: none;
 }
 
 #intro {
-  height: 15%;
-  width: 80%;
+  height: 12%;
+  width: 75%;
+  padding-left: 5%;
+  padding-top: 5%;
   border-radius: 50px;
+  border: none;
+  background-color: rgb(241, 244, 248);
   outline: none;
   resize: none;
 }
 
 #intro::placeholder {
-  padding-left: 5%;
-  padding-top: 2%;
+  box-sizing: content-box;
+  width: 100%;
   color: rgba(27, 27, 27, 0.202);
 }
 
@@ -96,7 +103,7 @@ textarea {
 .zipCode,
 .street,
 .houseNumber {
-  padding-left: 2.5%;
+  padding-left: 5%;
   height: 100%;
   width: 100%;
   border-radius: 50px;
@@ -116,6 +123,7 @@ textarea {
 .inner {
   width: 100%;
   height: 70%;
+  box-sizing: border-box;
   gap: 5%;
   display: flex;
   flex-direction: row;
@@ -130,7 +138,7 @@ button,
   align-content: center;
   border-radius: 50px;
   border: none;
-  background-color: rgb(255, 185, 97);
+  background-color: rgb(27, 207, 247);
   font-size: large;
   font-weight: 600;
   color: white;
@@ -142,20 +150,21 @@ label {
   width: 80%;
   margin-left: 5%;
   font-size: 1.2rem;
-  color: rgb(255, 185, 97);
+  color: rgb(27, 207, 247);
 }
 
 #profile {
   height: 50%;
   width: 70%;
+  padding-left: 5%;
   border-radius: 50px;
   border: none;
   background-color: rgb(241, 244, 248);
-  display: none;
+  /*   display: none; */
 }
 
 #profile::placeholder {
-  padding-left: 5%;
+  /* padding-left: 5%; */
   color: rgba(27, 27, 27, 0.202);
   outline: none;
 }
@@ -163,7 +172,23 @@ label {
 #picture {
   height: 40%;
   width: 80%;
-  margin-left: 25%;
+  /*  margin-left: 25%; */
+  cursor: pointer;
+  color: transparent;
+}
+
+#picture::-webkit-file-upload-button {
+  /* visibility: hidden; */
+  height: 100%;
+  width: 60%;
+  background-color: rgb(27, 207, 247);
+  /*  box-shadow: rgba(255, 145, 0, 0.5) 0px 3px 12px; */
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: small;
+  font-weight: 600;
+  /* letter-spacing: 0.2rem; */
   cursor: pointer;
 }
 
@@ -171,8 +196,8 @@ label {
   margin-bottom: 5%;
   height: 10%;
   width: 80%;
-  background-color: rgb(255, 144, 0);
-  box-shadow: rgba(255, 145, 0, 0.5) 0px 3px 12px;
+  background-color: rgb(27, 207, 247);
+  /* box-shadow: rgba(45, 246, 172, 0.5) 0px 3px 12px; */
   color: white;
   font-size: larger;
   font-weight: 600;
